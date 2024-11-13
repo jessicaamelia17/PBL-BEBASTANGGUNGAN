@@ -6,16 +6,22 @@
 }
 
 body {
+    background-image: url('wisuda.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-
 .header-container {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 .logoPoltek {
@@ -24,21 +30,38 @@ body {
 }
 
 .header-judul {
-    margin: 0; /* Remove default margin from h1 */
-    font-size: 0.7em; /* Adjust font size as needed */
+    font-size: 0.7em;
 }
 
 .box-formlogin {
-    margin-top: 5%;
-    background: transparent;
-    padding: 30px;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     max-width: 400px;
     width: 100%;
 }
 
 .selamatdatang {
     text-align: center;
+}
+
+/* New style for logo above welcome text */
+.logoPoltek-welcome {
+    max-width: 80px;
+    margin-bottom: 20px;
+}
+    
+/* Tambahkan styling untuk rectangle yang lebih panjang */
+.logo-rectangle {
+    background-color: rgba(47, 46, 46, 0.35);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    flex-grow: 1;
+    /* Pastikan ukurannya lebih tinggi */
+    width: 110%; /* Menutupi lebar kontainer */
+    max-width: 500px; /* Sesuaikan dengan lebar yang diinginkan */
 }
 
 .header-container {
@@ -62,6 +85,7 @@ header {
 h1 {
     font-size: 1.2em;
     line-height: 1.3;
+    margin-bottom: 20px;
 }
 
 main h2 {
@@ -71,17 +95,10 @@ main h2 {
 }
 
 .login-form {
-    background: rgba(208, 204, 232, 0.919);
+    background: rgba(208, 204, 232, 0.374);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
-
-.login-form p {
-    align-items: center;
-    font-size: 0.9em;
-    margin-bottom: 10px;
-}
-
 
 .login-form input[type="text"],
 .login-form input[type="password"] {
@@ -93,15 +110,21 @@ main h2 {
     background: #fff;
 }
 
+/* Kontrol jarak antara elemen form dengan rectangle yang lebih besar */
 .show-password {
     display: flex;
     align-items: center;
     font-size: 0.9em;
-    color: #fff;
+    color: #333;
 }
 
 .show-password input {
     margin-right: 5px;
+}
+
+/* Space between the show password checkbox and the login button */
+.space {
+    margin-bottom: 20px; /* penambahan spasi pada tampilkan password dan login */
 }
 
 button {
@@ -148,6 +171,10 @@ button:hover {
         padding: 15px;
     }
 
+    .login-form p {
+        text-align: center;
+    }
+    
     .login-form input[type="text"],
     .login-form input[type="password"] {
         padding: 8px;
